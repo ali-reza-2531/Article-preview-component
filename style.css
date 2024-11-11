@@ -1,0 +1,157 @@
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    
+}
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope','sans-serif';
+}
+body {
+    background: var(--Light-Grayish-Blue) ;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+}
+
+
+.card-image img {
+    width:100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.9em;
+    margin: 0 0 20px;
+    padding:0 1.5rem;
+}
+
+.card-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    background-color:white;
+    transition: background 0.3s ease;
+    padding: 1.5rem 2rem;
+    height: 60px;
+    
+}
+
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #333;
+    margin: 0;
+}
+
+.publish-date {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.share-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.share-icon img {
+    width: 15px;
+    height: 13px;
+}
+.shared{
+    background-color:var(--Very-Dark-Grayish-Blue);
+}
+
+.share-options{
+    display: flex;
+    align-items: center;
+}
+.share-options a img{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+.share-badge{
+    letter-spacing: 0.5rem;
+    font-size: .8rem;
+    color: white;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+.share-options-desktop{
+    display: flex;
+    align-items: center;
+    position:fixed;
+    bottom: 18rem;
+    right:22rem;
+    background-color:var(--Very-Dark-Grayish-Blue);
+    border-radius: 7px;
+    padding: 1rem 2rem;
+    z-index: 1;
+    gap: 15px;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width:768px){
+    .card{
+        display: flex;
+        max-width: 700px;
+    }
+    .card-image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
